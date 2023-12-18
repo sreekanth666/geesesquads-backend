@@ -17,7 +17,7 @@ exports.createList = async(req, res) => {
 
 exports.allCategory = async(req, res) => {
     try {
-        const allCategory = await cars.find()
+        const allCategory = await cars.find({})
         res.status(200).json(allCategory)
     } catch (error) {
         res.status(401).json(error)
